@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Adaptivetheme implementation to display a single Drupal page.
@@ -103,12 +104,6 @@
         <!-- !Branding -->
         <div<?php print $branding_attributes; ?>>
 
-          <?php if ($site_logo): ?>
-            <div id="logo">
-              <?php print $site_logo; ?>
-            </div>
-          <?php endif; ?>
-
           <?php if ($site_name || $site_slogan): ?>
             <!-- !Site name and Slogan -->
             <div<?php print $hgroup_attributes; ?>>
@@ -128,16 +123,42 @@
       <?php endif; ?>
 
       <!-- !Header Region -->
-      <?php print render($page['header']); ?>
-
+      <?php /* print render($page['header']); */ ?>
+      <div class="region region-header">
+        <div class="region-inner clearfix">
+          <div id="block-delta-blocks-logo" class="block block-delta-blocks">
+            <?php if ($site_logo): ?>
+              <div class="logo-img">
+                <?php print $site_logo; ?>
+              </div>
+            <?php endif; ?>
+          </div>
+          <nav id="block-system-main-menu" role="navigation">
+            <?php print render($page['menu_bar']); ?>
+            <?php if ($primary_navigation): print $primary_navigation; endif; ?>
+            <?php if ($secondary_navigation): print $secondary_navigation; endif; ?>
+          </nav>
+          <div id="block-search-form" class="block block-search" role="search">
+            <?php
+            $block = module_invoke('search', 'block_view', 'form');
+            print render($block['content']);
+            ?>
+          </div>
+          <div id="block-block-5" class="block custom-show-menu">
+            <div class="block-inner">
+              <div class="mobile-menu-button">
+                <a href="#">&nbsp;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
     <?php if ($page['region_slider']): ?>
-          <div id="region_slider" class="region_slider">
-            <?php print render($page['region_slider']); ?>
-          </div> <!-- /region_logo -->
+      <div id="region_slider" class="region_slider">
+        <?php print render($page['region_slider']); ?>
+      </div> <!-- /region_logo -->
     <?php endif; ?>
-    <!-- !Navigation -->
-    <?php print render($page['menu_bar']); ?>
 
     <!-- !Messages and Help -->
     <?php print $messages; ?>
@@ -159,7 +180,7 @@
 
           <<?php print $tag; ?> id="main-content">
 
-            <?php print render($title_prefix); // Does nothing by default in D7 core ?>
+            <?php print render($title_prefix); ?> <!-- Does nothing by default in D7 core -->
 
             <!-- !Main Content Header -->
             <?php if ($title || $primary_local_tasks || $secondary_local_tasks || $action_links = render($action_links)): ?>
@@ -202,7 +223,7 @@
             <!-- !Feed Icons -->
             <?php print $feed_icons; ?>
 
-            <?php print render($title_suffix); // Prints page level contextual links ?>
+            <?php print render($title_suffix); ?> <!-- Prints page level contextual links -->
 
           </<?php print $tag; ?>><!-- /end #main-content -->
 

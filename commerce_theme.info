@@ -72,9 +72,10 @@
   ; following as a guide:
 
   ; ie_scripts[lte IE 8][] = scripts/my-script.js
-  
+
   scripts[] = scripts/placeholders.js
   scripts[] = scripts/placeholders.min.js
+  scripts[] = scripts/commerce_profile_common.js
 
 
 ;----------// Regions
