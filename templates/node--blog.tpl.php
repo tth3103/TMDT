@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @file
  * Adaptivetheme implementation to display a node.
@@ -98,7 +99,7 @@
  */
 
 /**
- * Hide Content and Print it Separately
+ * Hide Content and Print it Separately.
  *
  * Use the hide() function to hide fields and other content, you can render it
  * later using the render() function. Install the Devel module and use
@@ -111,7 +112,7 @@ hide($content['links']);
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php $blog_image = $content['field_image']; unset($content['field_image']);?>
   <?php print render($blog_image);?>
-    
+
   <?php print render($title_prefix); ?>
 
   <?php if ($title): ?>
@@ -133,7 +134,7 @@ hide($content['links']);
   <div<?php print $content_attributes; ?>>
     <?php print render($content); ?>
   </div>
-    
+
   <?php unset($content['links']['blog']['#links']['blog_usernames_blog']); ?>
   <?php if ($links = render($content['links'])): ?>
     <nav<?php print $links_attributes; ?>></nav>
@@ -150,9 +151,9 @@ hide($content['links']);
         <?php $own_link = $comment['links']['comment']['#links']['comment_forbidden']['title'];?>
         <?php unset($comment['links']['comment']['#links']['comment_forbidden']); ?>
       <?php endif; ?>
-    <?php endforeach; ?>  
+    <?php endforeach; ?>
   <?php endif; ?>
   <?php print render($content['comments']); ?>
- 
+
   <?php print render($title_suffix); ?>
 </article>
