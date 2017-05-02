@@ -22,9 +22,9 @@
 .view-popular-categories .product-category-page-row .product-preview-price:before,
 .view-popular-categories .product-preview-rating .product-preview-price:before,
 .view-popular-categories .views-field-view .product-preview-price:before, #main-content .view-products-for-homepage .product-preview-price:before,
-.tags-page-row .product-preview-price:before, .view-popular-categories .views-slideshow-cycle-main-frame .views-field-commerce-price:before, 
-.sprite-product_price_product, .sprite-search_header, .sprite-shopping_cart, .sprite-special_offers, .sprite-special_offers_price, 
-.sprite-star_off, .sprite-star_on, .sprite-twitter, #footer .region-footer .region-inner .block .content .footer-social-links .twitter, 
+.tags-page-row .product-preview-price:before, .view-popular-categories .views-slideshow-cycle-main-frame .views-field-commerce-price:before,
+.sprite-product_price_product, .sprite-search_header, .sprite-shopping_cart, .sprite-special_offers, .sprite-special_offers_price,
+.sprite-star_off, .sprite-star_on, .sprite-twitter, #footer .region-footer .region-inner .block .content .footer-social-links .twitter,
 .sprite-unactive, .sprite-unactive_bottom, .sprite-visa, #footer .footer-information-image .visa,
 .region-leaderboard .region-inner .custom-shopping-cart .content a::before {
   background: url('images/sprite-s4147f803ac.png') no-repeat;
@@ -151,8 +151,8 @@ textarea:focus,
 
 #footer input.form-text:focus {
   -webkit-box-shadow: 0px 0px 6px 0px rgba(255,255,255,0.75);
-  -moz-box-shadow: 0px 0px 6px 0px rgba(255,255,255,0.75));
-  box-shadow: 0px 0px 6px 0px rgba(255,255,255,0.75));
+  -moz-box-shadow: 0px 0px 6px 0px rgba(255,255,255,0.75);
+  box-shadow: 0px 0px 6px 0px rgba(255,255,255,0.75);
 }
 
 input:-webkit-autofill {
@@ -1199,7 +1199,7 @@ div.region .block.block-search {
   border: none;
   height: 26px;
   width: 30px;
-  margin-top: -7px; 
+  margin-top: -7px;
   margin-left: -6px;
   font-size: 0;
   box-shadow: none;
@@ -2457,7 +2457,6 @@ body.html .pager .pager-next {
   box-sizing: border-box;
   font-size: 14px;
   height: 28px;
-  box-shadow: 
 }
 #footer .custom-footer-simplenews .form-submit {
   background: #eceeee;
