@@ -2414,12 +2414,10 @@ body.html .pager .pager-next {
   font-size: 0;
   margin: 0 9px 10px 0;
 }
-#footer .region-footer .region-inner .block .content a,
-.copyright a {
+#footer .region-footer .region-inner .block .content a {
   color: #fff;
 }
-#footer .region-footer .region-inner .block .content a:hover,
-.copyright a:hover {
+#footer .region-footer .region-inner .block .content a:hover {
   color: #CAD0D6;
 }
 #footer .region-footer .region-inner .block .content li {
@@ -2530,13 +2528,6 @@ body.html .pager .pager-next {
   *zoom: 1;
   vertical-align: top;
   margin-left: 8px;
-}
-.copyright {
-  max-width: 1170px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 #tasks {

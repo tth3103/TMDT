@@ -25,11 +25,7 @@
 #footer .region-footer {
   padding-top: 30px;
 }
-#footer .region-footer,
-.copyright {
+#footer .region-footer {
 	margin-left: 35px;
 	margin-right: 35px;
-}
-.copyright {
-  padding: 0;
 }

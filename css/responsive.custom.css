@@ -711,11 +711,6 @@
   #footer .region-footer, #footer .region-footer .region-inner {
   padding: 0;
   }
-  .copyright {
-    margin-left: 15px;
-    margin-right: 15px;
-    padding: 0;
-  }
   .commerce-order-handler-area-order-total .commerce-price-formatted-components {
     width: 50%;
   }
