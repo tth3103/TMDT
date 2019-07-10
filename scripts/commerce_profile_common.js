@@ -45,7 +45,7 @@
     $('.mobile-menu-button').once(function() {
       $(this).bind('click', function() {
         $('#block-system-main-menu').toggleClass('active');
-        $('#block-system-main-menu .menu clearfix').slideToggle('fast');
+        $('#block-system-main-menu').slideToggle('fast');
       });
     });
     function mobilecheck() {

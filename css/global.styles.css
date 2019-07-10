@@ -30,7 +30,7 @@
   background: url('images/sprite-s4147f803ac.png') no-repeat;
 }
 
-#block-block-5 {display:none}
+.custom-show-menu {display:none}
 
 #admin-menu {
   box-shadow: none !important;
@@ -1116,10 +1116,17 @@ a:hover {
   *zoom: 1;
   vertical-align: top;
 }
-#header .region-header .region-inner,
+#header .header-inner{
+  display: flex;
+  align-items: end;
+}
+#header .header-inner,
 #menu-bar {
   max-width: 1170px;
   margin: auto;
+}
+#header .region-header {
+  width: 100%;
 }
 #header .region-header .region-inner .block {
   clear: none;

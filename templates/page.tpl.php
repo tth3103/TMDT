@@ -99,59 +99,48 @@
     <?php print render($page['leaderboard']); ?>
 
     <header<?php print $header_attributes; ?>>
+      <div class="header-inner">
 
-      <?php if ($site_logo || $site_name || $site_slogan): ?>
-        <!-- !Branding -->
-        <div<?php print $branding_attributes; ?>>
+        <?php if ($site_logo || $site_name || $site_slogan): ?>
+          <!-- !Branding -->
+          <div<?php print $branding_attributes; ?>>
 
-          <?php if ($site_name || $site_slogan): ?>
-            <!-- !Site name and Slogan -->
-            <div<?php print $hgroup_attributes; ?>>
-
-              <?php if ($site_name): ?>
-                <h1<?php print $site_name_attributes; ?>><?php print $site_name; ?></h1>
+            <div id="block-delta-blocks-logo" class="block block-delta-blocks">
+              <?php if ($site_logo): ?>
+                <div class="logo-img">
+                  <?php print $site_logo; ?>
+                </div>
               <?php endif; ?>
-
-              <?php if ($site_slogan): ?>
-                <h2<?php print $site_slogan_attributes; ?>><?php print $site_slogan; ?></h2>
-              <?php endif; ?>
-
             </div>
-          <?php endif; ?>
 
-        </div>
-      <?php endif; ?>
+            <?php if ($site_name || $site_slogan): ?>
+              <!-- !Site name and Slogan -->
+              <div<?php print $hgroup_attributes; ?>>
 
-      <!-- !Header Region -->
-      <?php /* print render($page['header']); */ ?>
-      <div class="region region-header">
-        <div class="region-inner clearfix">
-          <div id="block-delta-blocks-logo" class="block block-delta-blocks">
-            <?php if ($site_logo): ?>
-              <div class="logo-img">
-                <?php print $site_logo; ?>
+                <?php if ($site_name): ?>
+                  <h1<?php print $site_name_attributes; ?>><?php print $site_name; ?></h1>
+                <?php endif; ?>
+
+                <?php if ($site_slogan): ?>
+                  <h2<?php print $site_slogan_attributes; ?>><?php print $site_slogan; ?></h2>
+                <?php endif; ?>
+
               </div>
             <?php endif; ?>
+
           </div>
-          <nav id="block-system-main-menu" role="navigation">
-            <?php print render($page['menu_bar']); ?>
-            <?php if ($primary_navigation): print $primary_navigation; endif; ?>
-            <?php if ($secondary_navigation): print $secondary_navigation; endif; ?>
-          </nav>
-          <div id="block-search-form" class="block block-search" role="search">
-            <?php
-            $block = module_invoke('search', 'block_view', 'form');
-            print render($block['content']);
-            ?>
-          </div>
-          <div id="block-block-5" class="block custom-show-menu">
-            <div class="block-inner">
-              <div class="mobile-menu-button">
-                <a href="#">&nbsp;</a>
-              </div>
+        <?php endif; ?>
+
+        <!-- !Header Region -->
+        <?php print render($page['header']); ?>
+        <div class="block custom-show-menu">
+          <div class="block-inner">
+            <div class="mobile-menu-button">
+              <a href="#">&nbsp;</a>
             </div>
           </div>
         </div>
+
       </div>
     </header>
 
